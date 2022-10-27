@@ -2,7 +2,7 @@
   apps:
     [ {
       name: "lab",
-      script: "/home/projetos-django/dj-server/manage.py",
+      cmd: "/home/projetos-django/dj-server/manage.py",
       args: [ "runserver", "0.0.0.0:8080" ],
       exec_mode: "fork",
       instances: "1",

@@ -2,7 +2,7 @@
 {
     "apps": [{
         "name": "dj-server",
-        "cmd": "/home/projetos-django/dj-server/dj_server/manage.py",
+        "script": "/home/projetos-django/dj-server/dj_server/manage.py",
         "args": [ "runserver", "0.0.0.0:8000" ],
         "exec_mode": "fork",
         "instances": "1",

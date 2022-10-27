@@ -1,14 +1,11 @@
 {
   apps:
-    [ {
-      name: "lab",
-      cmd: "/home/projetos-django/dj-server/manage.py",
-      args: [ "runserver", "0.0.0.0:8080" ],
-      exec_mode: "fork",
-      instances: "1",
-      wait_ready: true,
-      autorestart: true,
-      max_restarts: 5,
-      interpreter: "/home/projetos-django/dj-server/venv/bin/python3"
-    } ]
+  - cwd: '/home/projetos-django/dj-server'
+    script: 'python manage.py runserver'
+    args: 'server --binding 0.0.0.0'
+    interpreter: '/home/projetos-django/dj-server/venv/bin/python3'
+    name: 'django_project'
+    instances: 1
+    watch: false
+    exec_mode: fork_mode
 }

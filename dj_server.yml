@@ -1,8 +1,9 @@
 {
     "apps": [{
-        "name": "app_name",
+        "name": "dj-server",
+        "cmd": "/home/projetos-django/dj-server/manage.py",
+        "args": [ "runserver", "0.0.0.0:8000" ],
         "script": "python manage.py runserver",
-        "args": ["-c", "server --binding 0.0.0.0"],
         "instances": "1",
         "wait_ready": true,
         "autorestart": false,

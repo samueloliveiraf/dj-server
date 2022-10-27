@@ -1,14 +1,14 @@
 {
-   apps:
-      [{
-        name: "lab",
-        script: "/home/projetos-django/dj-server/manage.py",
-        args: ["runserver", "0.0.0.0:8080"],
-        exec_mode: "fork",
-        instances: "1",
-        wait_ready: true,
-        autorestart: true,
-        max_restarts: 5,
-        interpreter : "/home/projetos-django/dj-server/venv/bin/python3"
-      }]
+  apps:
+    [ {
+      name: "lab",
+      script: "/home/projetos-django/dj-server/manage.py",
+      args: [ "runserver", "0.0.0.0:8080" ],
+      exec_mode: "fork",
+      instances: "1",
+      wait_ready: true,
+      autorestart: true,
+      max_restarts: 5,
+      interpreter: "/home/projetos-django/dj-server/venv/bin/python3"
+    } ]
 }

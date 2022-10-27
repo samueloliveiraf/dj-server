@@ -1,11 +1,12 @@
 {
-  apps:
-  - cwd: '/home/projetos-django/dj-server'
-    script: 'python manage.py runserver'
-    args: 'server --binding 0.0.0.0'
-    interpreter: '/home/projetos-django/dj-server/venv/bin/python3'
-    name: 'django_project'
-    instances: 1
-    watch: false
-    exec_mode: fork_mode
+    "apps": [{
+        "name": "app_name",
+        "script": "python manage.py runserver",
+        "args": ["-c", "server --binding 0.0.0.0"],
+        "instances": "1",
+        "wait_ready": true,
+        "autorestart": false,
+        "max_restarts": 5,
+        "interpreter" : "/home/projetos-django/dj-server/venv/bin/python3",
+    }]
 }
